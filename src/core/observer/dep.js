@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-10-19 10:10:15
+ * @LastEditTime: 2021-10-19 10:54:06
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vue\src\core\observer\dep.js
+ */
 /* @flow */
 
 import type Watcher from './watcher'
@@ -29,6 +37,7 @@ export default class Dep {
   }
 
   depend () {
+    // Dep.target 是个 Watcher
     if (Dep.target) {
       Dep.target.addDep(this)
     }
